@@ -1,3 +1,11 @@
 # San_Francisco
 
-Loads just 200 articles at a time. Do not increase the limit or it may crash the server. May be best to stay at 100.
+https://mappingwikipedia.github.io/San_Francisco/
+
+Basemap is OpenStreetMap
+
+Loads 100 articles at a time (increasing this number can crash the map)
+
+Forked from Matthew Barker
+
+Ideas and collaborators welcome
