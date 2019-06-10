@@ -1,8 +1,6 @@
 # San_Francisco
 
-https://mappingwikipedia.github.io/San_Francisco/
-
-English language Wikipedia articles centered on San Francisco.
+English language Wikipedia articles mapped and centered on San Francisco: https://mappingwikipedia.github.io/San_Francisco/
 
 Basemap is OpenStreetMap
 
