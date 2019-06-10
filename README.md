@@ -2,10 +2,13 @@
 
 https://mappingwikipedia.github.io/San_Francisco/
 
+English language Wikipedia articles centered on San Francisco.
+
 Basemap is OpenStreetMap
 
-Loads 100 articles at a time (increasing this number can crash the map)
+Loads 100 articles at a time (increasing this number has crashed the map every time - beware before scaling)
 
-Forked from Matthew Barker
+Ideas welcome
 
-Ideas and collaborators welcome
+Forked from: https://github.com/MatthewBarker/leaflet-wikipedia
+
