@@ -19,7 +19,11 @@
     <script src="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/bundle.js"></script>
     <script>   
 	    
-        var map = L.map('map').setView([37.785167, -122.464277], 14);
+        var map = L.map('map', {
+        minZoom: 12,
+        maxZoom: 20
+    });
+	map.setView([37.785167, -122.464277], 14);
 	    
 
 	    
