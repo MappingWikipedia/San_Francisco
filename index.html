@@ -27,9 +27,16 @@
 	    
 
 	    
-        // Add an OpenStreetMap tile layer
-        L.mapbox.accessToken = 'pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ';
-var map = L.mapbox.map('map','sheffieldhale.cjw9z7ofb0l4f1dqb3ghrst3a').setView([37.93, -122.36], 14);
+        // Mapbox Map
+	    mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ';
+	var map = new mapboxgl.Map({
+	container: 'map', // container id
+	style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+	center: [-74.50, 40], // starting position [lng, lat]
+	zoom: 9 // starting zoom
+	});
+	    
+	  
 	    
         // Add a Wikipedia layer
         L.layerGroup.wikipediaLayer({ target: '_blank', images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
