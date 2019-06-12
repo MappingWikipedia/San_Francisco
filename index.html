@@ -26,15 +26,11 @@
 	map.setView([37.785167, -122.464277], 14);
 	    
 
-	    
-        // Mapbox Map
-	    mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ';
-	var map = new mapboxgl.Map({
-	container: 'map', // container id
-	style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-	center: [-74.50, 40], // starting position [lng, lat]
-	zoom: 9 // starting zoom
-	});
+	     // Add an OpenStreetMap tile layer
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+	  
 	    
 	  
 	    
