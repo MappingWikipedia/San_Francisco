@@ -6,5 +6,5 @@ Loads 100 articles at a time.
 
 Ideas welcome
 
-Forked from: https://github.com/MatthewBarker/leaflet-wikipedia
+Built with Wikipedia Leaflet Layer from: https://github.com/MatthewBarker/leaflet-wikipedia
 
