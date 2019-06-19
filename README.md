@@ -1,8 +1,10 @@
 # San_Francisco
 
-English language Wikipedia articles mapped, opening on San Francisco: https://mappingwikipedia.github.io/San_Francisco/
+Explore Wikipedia articles, opening on San Francisco: https://mappingwikipedia.github.io/San_Francisco/
 
 Loads 100 articles at a time.
+
+Options for a variety of Wikipedias (different languages).
 
 Ideas welcome
 
