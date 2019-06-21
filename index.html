@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <title>Geotagged Wikipedia</title>
+    <title>Geotagged Articles from the Most Visited Wikipedias</title>
     <link href="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/leaflet.css" rel="stylesheet" type="text/css" />
     
 	<style>
@@ -56,6 +56,10 @@
 	var ItWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://it.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
     	var PlWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://pl.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
     	var NlWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://nl.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+    	var CsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://cs.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+    	var SvWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://sv.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+    	var ArWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ar.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+    	var KoWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ko.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 
 	    
 	    var baseLayers = {
@@ -75,6 +79,10 @@
 		"Polish": PlWikipedia,
 		"Portuguese": PtWikipedia,
 		"Dutch": NlWikipedia,
+		"Czech": CsWikipedia,
+		"Swedish": SvWikipedia,
+		"Arabic": ArWikipedia,
+		"Korean": KoWikipedia,
 
 
 	};
