@@ -35,12 +35,6 @@
     })
 	map.setView([37.7609, -122.4114], 14);
 	Add a Basemap
-	//  var watercolor = L.tileLayer('https://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
-    //        attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-    //     })
-	//   var terrain = L.tileLayer('https://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
-    //        attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-    //     })  
 	    var OpenStreetMap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
@@ -73,8 +67,6 @@
 
 	    
 	      var baseLayers = {
-		//    "watercolor": watercolor,
-		 //   "terrain": terrain,
 	      "OpenStreetMap": OpenStreetMap
 	};
 	var overlays = {
