@@ -38,6 +38,15 @@
 	    var OpenStreetMap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
+		var Minimal = // Add Mapbox tile layer
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: '© <a href="https://www.mapbox.com/">Mapbox</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token.here'
+}).addTo(map);
 	   
         // Add a Wikipedia layer
 	var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' }).addTo(map);
@@ -66,9 +75,11 @@
     	var NoWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://no.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
 
 	    
-	      var baseLayers = {
-	      "OpenStreetMap": OpenStreetMap
+	var baseLayers = {
+    "OpenStreetMap": OpenStreetMap
+	"Mapbox Minimal": Minimal
 	};
+		
 	var overlays = {
 		"English": EnWikipedia,
 		"German": DeWikipedia,
