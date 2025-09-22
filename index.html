@@ -60,6 +60,18 @@
 
 	   
         // Add a Wikipedia layer
+		var wikiOptions = {
+    target: '_blank',
+    images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images',
+    // Try different parameter names:
+    gslimit: 500,        // Geosearch limit
+    gsrlimit: 500,       // Geosearch result limit  
+    limit: 500,          // General limit
+    maxItems: 500,       // Max items
+    count: 500,          // Count parameter
+    radius: 20000,       // 20km radius
+    bbox: true           // Use bounding box instead of radius
+};
 	var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' }).addTo(map);
 	var JaWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ja.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
 	var EsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
