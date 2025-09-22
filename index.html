@@ -35,14 +35,16 @@
     })
 	map.setView([37.7609, -122.4114], 14);
 	    // Add a Basemap
+		var OpenStreetMap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+		
 		var Blue = L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cl3ews8kd000115odtecxz7ui/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ', {
     attribution: '© <a href="https://www.mapbox.com/">Mapbox</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     tileSize: 512,
     zoomOffset: -1
 }).addTo(map);
-		var OpenStreetMap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+		
 
 	   
         // Add a Wikipedia layer
@@ -73,8 +75,9 @@
 
 	    
 	var baseLayers = {
-	    "Blue basemap": Blue,
-	    "OpenStreetMap": OpenStreetMap
+	    "OpenStreetMap": OpenStreetMap,
+		"Sky Blue Lite": Blue
+
 	};
 		
 		
