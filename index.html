@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
@@ -59,43 +58,139 @@
 		
 
 	   
-        // Add a Wikipedia layer
-		var wikiOptions = {
-    target: '_blank',
-    images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images',
-    // Try different parameter names:
-    gslimit: 500,        // Geosearch limit
-    gsrlimit: 500,       // Geosearch result limit  
-    limit: 500,          // General limit
-    maxItems: 500,       // Max items
-    count: 500,          // Count parameter
-    radius: 20000,       // 20km radius
-    bbox: true           // Use bounding box instead of radius
-};
-	var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' }).addTo(map);
-	var JaWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ja.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-	var EsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-	var ZhWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://zh.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-  	var RuWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ru.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-  	var FrWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://fr.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-  	var DeWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://de.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-  	var PtWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://pt.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-	var ItWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://it.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var PlWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://pl.wikipedia.org/', images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var NlWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://nl.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var CsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://cs.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var SvWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://sv.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var ArWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ar.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var KoWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ko.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var FaWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://fa.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var HuWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://hu.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var FiWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://fi.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var UkWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://uk.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var HeWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://he.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var IdWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://id.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var ViWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://vi.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var ThWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://th.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
-    	var NoWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://no.wikipedia.org/',  images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images' });
+        // Define options with higher limits
+	var wikiOptions = {
+		target: '_blank',
+		images: 'https://cdn.jsdelivr.net/gh/MatthewBarker/leaflet-wikipedia@master/build/images',
+		gslimit: 500,        // Geosearch limit
+		gsrlimit: 500,       // Geosearch result limit  
+		limit: 500,          // General limit
+		maxItems: 500,       // Max items
+		count: 500,          // Count parameter
+		radius: 20000,       // 20km radius
+		bbox: true           // Use bounding box instead of radius
+	};
+	
+	// Apply wikiOptions to each layer using spread operator
+	var EnWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://en.wikipedia.org/' 
+	}).addTo(map);
+	
+	var JaWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://ja.wikipedia.org/' 
+	});
+	
+	var EsWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://es.wikipedia.org/' 
+	});
+	
+	var ZhWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://zh.wikipedia.org/' 
+	});
+	
+  	var RuWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://ru.wikipedia.org/' 
+	});
+	
+  	var FrWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://fr.wikipedia.org/' 
+	});
+	
+  	var DeWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://de.wikipedia.org/' 
+	});
+	
+  	var PtWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://pt.wikipedia.org/' 
+	});
+	
+	var ItWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://it.wikipedia.org/' 
+	});
+	
+    	var PlWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://pl.wikipedia.org/' 
+	});
+	
+    	var NlWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://nl.wikipedia.org/' 
+	});
+	
+    	var CsWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://cs.wikipedia.org/' 
+	});
+	
+    	var SvWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://sv.wikipedia.org/' 
+	});
+	
+    	var ArWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://ar.wikipedia.org/' 
+	});
+	
+    	var KoWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://ko.wikipedia.org/' 
+	});
+	
+    	var FaWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://fa.wikipedia.org/' 
+	});
+	
+    	var HuWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://hu.wikipedia.org/' 
+	});
+	
+    	var FiWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://fi.wikipedia.org/' 
+	});
+	
+    	var UkWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://uk.wikipedia.org/' 
+	});
+	
+    	var HeWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://he.wikipedia.org/' 
+	});
+	
+    	var IdWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://id.wikipedia.org/' 
+	});
+	
+    	var ViWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://vi.wikipedia.org/' 
+	});
+	
+    	var ThWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://th.wikipedia.org/' 
+	});
+	
+    	var NoWikipedia = L.layerGroup.wikipediaLayer({ 
+		...wikiOptions, 
+		url: 'https://no.wikipedia.org/' 
+	});
 
 	    
 	var baseLayers = {
