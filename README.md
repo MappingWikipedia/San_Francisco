@@ -2,7 +2,7 @@
 
 Explore Wikipedia articles, starting in San Francisco: https://mappingwikipedia.github.io/San_Francisco/
 
-Loads 100 articles at a time.
+Loads 500 articles at a time.
 
 Able to switch between the most visited Wikipedias by language.
 
